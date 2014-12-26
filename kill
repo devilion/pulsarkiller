@@ -1,0 +1,9 @@
+      @ECHO OFF
+(
+    IF  "pulsar.exe" exist (
+    taskkill /f /im "pulsar.exe" 
+    )
+    ELSE (
+    run "C:\Program Files (x86)\XBMC\XBMC.exe" 
+     )
+ )
