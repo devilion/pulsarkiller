@@ -1,9 +1,9 @@
-      @ECHO OFF
-(
-    IF  "pulsar.exe" exist (
-    taskkill /f /im "pulsar.exe" 
-    )
-    ELSE (
-    run "C:\Program Files (x86)\XBMC\XBMC.exe" 
-     )
+@ECHO OFF
+IF exist "pulsar.exe" == tasklist /fi "imagename eq pulsar.exe"
+( taskkill /f /im "pulsar.exe" 
+) 
+ If not exist "pulsar.exe" == tasklist /fi "imagename eq pulsar.exe"
+ ("C:\Program Files (x86)\XBMC\XBMC.exe" 
  )
+echo starting %programnaem%== tasklist /fi "imagename eq xbmc.exe"
+ exit
